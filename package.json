@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "validate": "tsc"
   },
   "dependencies": {
     "@chakra-ui/gatsby-plugin": "^2.0.1",
@@ -35,5 +36,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "styled-components": "^5.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.2"
   }
 }

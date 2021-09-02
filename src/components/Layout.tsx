@@ -2,7 +2,11 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { Box, Flex } from "@chakra-ui/react";
 
-const Layout = ({ pageTitle, children }) => {
+interface Props {
+  pageTitle: string;
+}
+
+const Layout: React.FC<Props> = ({ pageTitle, children }) => {
   return (
     <Box m="auto" maxWidth={500} fontFamily="sans-serif">
       <title>{pageTitle}</title>
