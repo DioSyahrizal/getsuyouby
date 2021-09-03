@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import Layout from "components/Layout";
+import Layout from "../components/Layout";
 
 const IndexPage = () => {
   return (
@@ -10,7 +10,6 @@ const IndexPage = () => {
 
       <StaticImage
         alt="Black Lagoon Squad"
-        placeholder="blurred"
         src="https://dafunda.com/wp-content/uploads/2017/03/Black_Lagoon_C-min-1024x570.jpg"
       />
     </Layout>

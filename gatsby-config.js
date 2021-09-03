@@ -1,7 +1,9 @@
+const path = require("path");
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "blog-chakra",
+    title: "Blog Chakra",
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -18,18 +20,9 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: `blog`,
+        path: `${__dirname}/blog/`,
       },
-      __key: "images",
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: "./src/pages/",
-      },
-      __key: "pages",
     },
     {
       resolve: "@chakra-ui/gatsby-plugin",
@@ -44,6 +37,13 @@ module.exports = {
          * if false, this plugin will not use <ColorModeProvider />
          */
         isUsingColorMode: true,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-root-import",
+      options: {
+        components: path.join(__dirname, "src/components"),
+        pages: path.join(__dirname, "src/pages"),
       },
     },
   ],
